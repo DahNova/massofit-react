@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import ProfilePage from './pages/ProfilePage'
 import CollaborationsPage from './pages/CollaborationsPage'
-import MarketPage from './pages/MarketPage'
 import ContactPage from './pages/ContactPage'
+import ServiziPage from './pages/ServiziPage'
 import { Facebook } from 'lucide-react'
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
             </Link>
             <div className="flex space-x-4 mt-2 md:mt-0">
               <Link to="/" className="hover:text-blue-600">Home</Link>
+              <Link to="/servizi" className="hover:text-blue-600">Servizi</Link>
               <Link to="/profilo" className="hover:text-blue-600">Profilo</Link>
               <Link to="/collaborazioni" className="hover:text-blue-600">Collaborazioni</Link>
-              <Link to="/mercato" className="hover:text-blue-600">Mercato</Link>
               <Link to="/contatti" className="hover:text-blue-600">Contatti</Link>
             </div>
           </nav>
@@ -29,9 +29,9 @@ function App() {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/servizi" element={<ServiziPage />} />
             <Route path="/profilo" element={<ProfilePage />} />
             <Route path="/collaborazioni" element={<CollaborationsPage />} />
-            <Route path="/mercato" element={<MarketPage />} />
             <Route path="/contatti" element={<ContactPage />} />
           </Routes>
         </main>
